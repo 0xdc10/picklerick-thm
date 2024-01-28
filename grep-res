@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Rick is sup4r cool</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/bootstrap.min.css">
+  <script src="assets/jquery.min.js"></script>
+  <script src="assets/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Rick Portal</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Commands</a></li>
+        <li><a href="/denied.php">Potions</a></li>
+        <li><a href="/denied.php">Creatures</a></li>
+        <li><a href="/denied.php">Potions</a></li>
+        <li><a href="/denied.php">Beth Clone Notes</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <form name="input" action="" method="post">
+      <h3>Command Panel</h3></br>
+      <input type="text" class="form-control" name="command" placeholder="Commands"/></br>
+      <input type="submit" value="Execute" class="btn btn-success" name="sub"/>
+    </form>
+    </br><pre>Sup3rS3cretPickl3Ingred.txt:mr. meeseek hair
+clue.txt:Look around the file system for the other ingredient.
+denied.php:<?php
+denied.php:session_start();
+denied.php:if($_SESSION["login"] == false) {
+denied.php:   header("Location: /login.php"); die();
+denied.php:}
+denied.php:?>
+denied.php:<!DOCTYPE html>
+denied.php:<html lang="en">
+denied.php:<head>
+denied.php:  <title>Rick is sup4r cool</title>
+denied.php:  <meta charset="utf-8">
+denied.php:  <meta name="viewport" content="width=device-width, initial-scale=1">
+denied.php:  <link rel="stylesheet" href="assets/bootstrap.min.css">
+denied.php:  <script src="assets/jquery.min.js"></script>
+denied.php:  <script src="assets/bootstrap.min.js"></script>
+denied.php:</head>
+denied.php:<body>
+denied.php:  <nav class="navbar navbar-inverse">
+denied.php:    <div class="container">
+denied.php:      <div class="navbar-header">
+denied.php:        <a class="navbar-brand" href="/portal.php">Rick Portal</a>
+denied.php:      </div>
+denied.php:      <ul class="nav navbar-nav">
+denied.php:        <li><a href="/portal.php">Commands</a></li>
+denied.php:        <li><a href="/denied.php">Potions</a></li>
+denied.php:        <li><a href="/denied.php">Creatures</a></li>
+denied.php:        <li><a href="/denied.php">Potions</a></li>
+denied.php:        <li><a href="/denied.php">Beth Clone Notes</a></li>
+denied.php:      </ul>
+denied.php:    </div>
+denied.php:  </nav>
+denied.php:  <div class="container">
+denied.php:    Only the <b>REAL</b> rick can view this page..</br></br><img src="assets/picklerick.gif">
+denied.php:  </div>
+denied.php:</body>
+denied.php:</html>
+index.html:<!DOCTYPE html>
+index.html:<html lang="en">
+index.html:<head>
+index.html:  <title>Rick is sup4r cool</title>
+index.html:  <meta charset="utf-8">
+index.html:  <meta name="viewport" content="width=device-width, initial-scale=1">
+index.html:  <link rel="stylesheet" href="assets/bootstrap.min.css">
+index.html:  <script src="assets/jquery.min.js"></script>
+index.html:  <script src="assets/bootstrap.min.js"></script>
+index.html:  <style>
+index.html:  .jumbotron {
+index.html:    background-image: url("assets/rickandmorty.jpeg");
+index.html:    background-size: cover;
+index.html:    height: 340px;
+index.html:  }
+index.html:  </style>
+index.html:</head>
+index.html:<body>
+index.html:  <div class="container">
+index.html:    <div class="jumbotron"></div>
+index.html:    <h1>Help Morty!</h1></br>
+index.html:    <p>Listen Morty... I need your help, I've turned myself into a pickle again and this time I can't change back!</p></br>
+index.html:    <p>I need you to <b>*BURRRP*</b>....Morty, logon to my computer and find the last three secret ingredients to finish my pickle-reverse potion. The only problem is,
+index.html:    I have no idea what the <b>*BURRRRRRRRP*</b>, password was! Help Morty, Help!</p></br>
+index.html:  </div>
+index.html:  <!--
+index.html:    Note to self, remember username!
+index.html:    Username: R1ckRul3s
+index.html:  -->
+index.html:</body>
+index.html:</html>
+login.php:<?php
+login.php:session_start();
+login.php:$errorMsg = "";
+login.php:$validUser = $_SESSION["login"] === true;
+login.php:if(isset($_POST["sub"])) {
+login.php:  $validUser = $_POST["username"] == "R1ckRul3s" && $_POST["password"] == "Wubbalubbadubdub";
+login.php:  if(!$validUser) $errorMsg = "Invalid username or password.";
+login.php:  else $_SESSION["login"] = true;
+login.php:}
+login.php:if($validUser) {
+login.php:   header("Location: /portal.php"); die();
+login.php:}
+login.php:?>
+login.php:<!DOCTYPE html>
+login.php:<html lang="en">
+login.php:<head>
+login.php:  <title>Rick is sup4r cool</title>
+login.php:  <meta charset="utf-8">
+login.php:  <meta name="viewport" content="width=device-width, initial-scale=1">
+login.php:  <link rel="stylesheet" href="assets/bootstrap.min.css">
+login.php:  <script src="assets/jquery.min.js"></script>
+login.php:  <script src="assets/bootstrap.min.js"></script>
+login.php:</head>
+login.php:<body>
+login.php:  <div class="container">
+login.php:  </br><img width="300" src="assets/portal.jpg"><h3>Portal Login Page</h3></br>
+login.php:    <form name="input" action="" method="post">
+login.php:      <label for="username">Username:</label><input type="text" class="form-control" value="<?= $_POST["username"] ?>" id="username" name="username" />
+login.php:      <label for="password">Password:</label><input type="password" class="form-control" value="" id="password" name="password" />
+login.php:      <?php
+login.php:        if($errorMsg) { ?>
+login.php:        </br><div class="alert alert-danger" role="alert">
+login.php:          <?= $errorMsg ?>
+login.php:        </div>
+login.php:      <?php
+login.php:        }
+login.php:      ?>
+login.php:    </br><input type="submit" value="Login" class="btn btn-success" name="sub"/>
+login.php:    </form>
+login.php:  </div>
+login.php:</body>
+login.php:</html>
+portal.php:<?php
+portal.php:session_start();
+portal.php:if($_SESSION["login"] == false) {
+portal.php:   header("Location: /login.php"); die();
+portal.php:}
+portal.php:?>
+portal.php:<!DOCTYPE html>
+portal.php:<html lang="en">
+portal.php:<head>
+portal.php:  <title>Rick is sup4r cool</title>
+portal.php:  <meta charset="utf-8">
+portal.php:  <meta name="viewport" content="width=device-width, initial-scale=1">
+portal.php:  <link rel="stylesheet" href="assets/bootstrap.min.css">
+portal.php:  <script src="assets/jquery.min.js"></script>
+portal.php:  <script src="assets/bootstrap.min.js"></script>
+portal.php:</head>
+portal.php:<body>
+portal.php:  <nav class="navbar navbar-inverse">
+portal.php:    <div class="container">
+portal.php:      <div class="navbar-header">
+portal.php:        <a class="navbar-brand" href="#">Rick Portal</a>
+portal.php:      </div>
+portal.php:      <ul class="nav navbar-nav">
+portal.php:        <li class="active"><a href="#">Commands</a></li>
+portal.php:        <li><a href="/denied.php">Potions</a></li>
+portal.php:        <li><a href="/denied.php">Creatures</a></li>
+portal.php:        <li><a href="/denied.php">Potions</a></li>
+portal.php:        <li><a href="/denied.php">Beth Clone Notes</a></li>
+portal.php:      </ul>
+portal.php:    </div>
+portal.php:  </nav>
+portal.php:  <div class="container">
+portal.php:    <form name="input" action="" method="post">
+portal.php:      <h3>Command Panel</h3></br>
+portal.php:      <input type="text" class="form-control" name="command" placeholder="Commands"/></br>
+portal.php:      <input type="submit" value="Execute" class="btn btn-success" name="sub"/>
+portal.php:    </form>
+portal.php:    <?php
+portal.php:      function contains($str, array $arr)
+portal.php:      {
+portal.php:          foreach($arr as $a) {
+portal.php:              if (stripos($str,$a) !== false) return true;
+portal.php:          }
+portal.php:          return false;
+portal.php:      }
+portal.php:      // Cant use cat
+portal.php:      $cmds = array("cat", "head", "more", "tail", "nano", "vim", "vi");
+portal.php:      if(isset($_POST["command"])) {
+portal.php:        if(contains($_POST["command"], $cmds)) {
+portal.php:          echo "</br><p><u>Command disabled</u> to make it hard for future <b>PICKLEEEE RICCCKKKK</b>.</p><img src='assets/fail.gif'>";
+portal.php:        } else {
+portal.php:          $output = shell_exec($_POST["command"]);
+portal.php:          echo "</br><pre>$output</pre>";
+portal.php:        }
+portal.php:      }
+portal.php:    ?>
+portal.php:    <!-- Vm1wR1UxTnRWa2RUV0d4VFlrZFNjRlV3V2t0alJsWnlWbXQwVkUxV1duaFZNakExVkcxS1NHVkliRmhoTVhCb1ZsWmFWMVpWTVVWaGVqQT0== -->
+portal.php:  </div>
+portal.php:</body>
+portal.php:</html>
+robots.txt:Wubbalubbadubdub
+</pre>    <!-- Vm1wR1UxTnRWa2RUV0d4VFlrZFNjRlV3V2t0alJsWnlWbXQwVkUxV1duaFZNakExVkcxS1NHVkliRmhoTVhCb1ZsWmFWMVpWTVVWaGVqQT0== -->
+  </div>
+</body>
+</html>
+

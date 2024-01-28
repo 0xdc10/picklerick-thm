@@ -1,0 +1,58 @@
+Starting Nmap 7.93 ( https://nmap.org ) at 2024-01-28 02:37 EST
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 02:37
+Completed NSE at 02:37, 0.00s elapsed
+Initiating NSE at 02:37
+Completed NSE at 02:37, 0.00s elapsed
+Initiating NSE at 02:37
+Completed NSE at 02:37, 0.00s elapsed
+Initiating Ping Scan at 02:37
+Scanning 10.10.93.116 [2 ports]
+Completed Ping Scan at 02:37, 0.32s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 02:37
+Completed Parallel DNS resolution of 1 host. at 02:37, 0.08s elapsed
+Initiating Connect Scan at 02:37
+Scanning 10.10.93.116 [1000 ports]
+Discovered open port 22/tcp on 10.10.93.116
+Discovered open port 80/tcp on 10.10.93.116
+Stats: 0:00:10 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
+Connect Scan Timing: About 79.50% done; ETC: 02:37 (0:00:02 remaining)
+Completed Connect Scan at 02:37, 13.70s elapsed (1000 total ports)
+Initiating Service scan at 02:37
+Scanning 2 services on 10.10.93.116
+Completed Service scan at 02:37, 6.50s elapsed (2 services on 1 host)
+NSE: Script scanning 10.10.93.116.
+Initiating NSE at 02:37
+Completed NSE at 02:37, 6.55s elapsed
+Initiating NSE at 02:37
+Completed NSE at 02:37, 0.97s elapsed
+Initiating NSE at 02:37
+Completed NSE at 02:37, 0.00s elapsed
+Nmap scan report for 10.10.93.116
+Host is up (0.22s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT   STATE    SERVICE  VERSION
+20/tcp filtered ftp-data
+22/tcp open     ssh      OpenSSH 7.2p2 Ubuntu 4ubuntu2.6 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 d995c9ce01314abc3acc6e8245e5e26b (RSA)
+|   256 94b436dff92eb7eb940e214becb636d1 (ECDSA)
+|_  256 458b1b7bd238e2404f5f3021bcda9fdc (ED25519)
+80/tcp open     http     Apache httpd 2.4.18 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Rick is sup4r cool
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+NSE: Script Post-scanning.
+Initiating NSE at 02:37
+Completed NSE at 02:37, 0.00s elapsed
+Initiating NSE at 02:37
+Completed NSE at 02:37, 0.00s elapsed
+Initiating NSE at 02:37
+Completed NSE at 02:37, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 28.81 seconds
